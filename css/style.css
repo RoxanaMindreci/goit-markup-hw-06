@@ -671,8 +671,6 @@ address {
 .modal-content {
     position: relative;
     background-color: var(--background-white-color);
-    width: 528px;
-    height: 581px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -680,23 +678,168 @@ address {
     box-shadow: 0px 2px 1px 0px #00000033;
     box-shadow: 0px 1px 1px 0px #00000024;
     box-shadow: 0px 1px 3px 0px #0000001F;
+    padding: 8px;
 }
 .is-hidden {
     visibility: hidden;
 }
 .close-btn {
-    color: rgba(0, 0, 0, 1);
+    box-sizing: content-box;
+    width: 18px;
+    height: 18px;
+    padding: 6px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
     cursor: pointer;
     position: absolute;
     top: 8px;
     right: 8px;
-    background-color: var(--background-white-color);
-    border: 1px solid rgba(0, 0, 0, 0.1);
-    border-radius: 50%;
+}
+.close-icon {
+    fill: rgba(0, 0, 0, 1);
+    width: 11px;
+    height: 11px;
+}
+.close-icon:hover,
+.close-icon:focus {
+    fill: var(--blue-color);
+}
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 32px;
+}
+.contact-form-title {
+    font-family: inherit;
+    color: var(--font-dark-grey-color);
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 23px;
+    letter-spacing: 0.03em;
+    text-align: center;
+}
+.input-container {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    position: relative;
+}
+
+.input-container svg {
     width: 18px;
     height: 18px;
-    padding: 12px;
+    position: absolute;
+    top: calc(50% - 9px);
+    left: 12px;
+}
+
+.textfield {
+    height: 40px;
+    padding: 11px 12px 11px 42px;
+}
+
+textarea {
+    height: 120px;
+    padding: 12px 16px;
+}
+
+textarea::placeholder {
+    font-family: var(--text-font-family);
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 14px;
+    letter-spacing: 0.01em;
+    color: rgba(117, 117, 117, 0.5);
+}
+
+.textfield,
+textarea {
+    border-radius: 4px;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    outline: none;
+}
+
+.textfield:focus,
+textarea:focus {
+    border: 1px solid rgba(33, 150, 243, 1);
+}
+
+.textfield:focus+svg {
+    fill: rgba(33, 150, 243, 1);
+}
+
+.form-label {
+    font-family: inherit;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 14px;
+    letter-spacing: 0.01em;
+    color: rgba(117, 117, 117, 1);
+}
+.terms-container {
     display: flex;
     justify-content: center;
     align-items: center;
+    padding-top: 20px;
+    padding-bottom: 30px;
+}
+.check-input {
+    position: absolute;
+    width: 16px;
+    height: 15px;
+    position: absolute;
+    background: var(--font-dark-grey-color);
+}
+.check-box {
+    display: block;
+    position: absolute;
+    width: 16px;
+    height: 15px;
+    overflow: hidden;
+    border-radius: 0.05em;
+    background-position: 50% 50%;
+    border: 2px solid var(--font-dark-grey-color);
+    transition: border var(--transition);
+}
+.check__input:checked+.check__box {
+    background-image: url(../images/symbol-defs.svg);
+    border: var(--blue-color);
+}
+.check__input:focus+.check__box,
+.check__input:hover+.check__box {
+    border: var(--blue-color);
+}
+.check__input:disabled+.check__box {
+    box-shadow: 0 0 0 0.2em var(--font-dark-grey-color);
+}
+
+.check__input:checked:disabled+.check__box {
+    background-color: var(--font-dark-grey-color);
+}
+.submit-button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.submit-button {
+    box-sizing: content-box; 
+    padding: 10px 80px 10px 80px;
+    border-radius: 4px;
+    background: var(--blue-color);
+    font-family: inherit;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 30px;
+    letter-spacing: 0.06em;
+    text-align: center;
+    color: var(--background-white-color);
+    border-color: var(--blue-color);
+    box-shadow: 0px 4px 4px 0px #00000026;
+    transition: border var(--transition), shadow var(--transition)
+}
+.submit-button:hover {
+    background: var(--blue-hover-color);
+    box-shadow: 0px 4px 4px 0px #00000026;
+
 }

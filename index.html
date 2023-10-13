@@ -559,7 +559,84 @@
     <!-- Request our Service Modal -->
     <div class="modal is-hidden" data-modal>
       <div class="modal-content">
-        <button class="close-btn" data-modal-close>&times;</button>
+        <svg class="close-btn" data-modal-close>
+          <use
+            href="./images/symbol-defs.svg#icon-close"
+            class="close-icon"
+          ></use>
+        </svg>
+        <form action="" method="get" autocomplete="off" class="contact-form">
+          <b class="contact-form-title">
+            Leave your information and we'll call you back
+          </b>
+          <div class="input-container">
+            <label class="form-label" for="name">Name</label>
+            <div class="input-container">
+              <input
+                class="textfield"
+                type="text"
+                name="name"
+                id="name"
+                required
+              />
+              <svg>
+                <use href="./images/symbol-defs.svg#icon-person"></use>
+              </svg>
+            </div>
+          </div>
+
+          <div class="input-container">
+            <label class="form-label" for="telephone">Telephone</label>
+            <div class="input-container">
+              <input
+                class="textfield"
+                type="tel"
+                name="telephone"
+                id="telephone"
+                pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$"
+                required
+              />
+              <svg>
+                <use href="./images/symbol-defs.svg#icon-telephone"></use>
+              </svg>
+            </div>
+          </div>
+
+          <div class="input-container">
+            <label class="form-label" for="email">Email</label>
+            <div class="input-container">
+              <input
+                class="textfield"
+                type="text"
+                name="email"
+                id="email"
+                pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$"
+                required
+              />
+              <svg>
+                <use href="./images/symbol-defs.svg#icon-email"></use>
+              </svg>
+            </div>
+          </div>
+
+          <div class="input-container">
+            <label class="form-label">Comments</label>
+            <textarea placeholder="Enter the text"></textarea>
+          </div>
+
+          <div class="input-container terms-container">
+            <label class="check option">
+              <input class="check__input" type="checkbox" />
+              <span class="check__box"></span>
+              I agree with the letter and accept the
+              <a href="#">Terms and Conditions</a>
+            </label>
+          </div>
+
+          <div class="submit-button-container">
+            <input type="submit" class="submit-button" value="Send" />
+          </div>
+        </form>
       </div>
     </div>
     <script src="./js/modal.js"></script>
