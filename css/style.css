@@ -703,7 +703,7 @@ address {
 }
 .close-icon:hover,
 .close-icon:focus {
-    fill: var(--blue-color);
+    fill: var(--blue-hover-color);
 }
 .contact-form {
     display: flex;
@@ -726,25 +726,22 @@ address {
     gap: 4px;
     position: relative;
 }
-
 .input-container svg {
     width: 18px;
     height: 18px;
     position: absolute;
     top: calc(50% - 9px);
     left: 12px;
+    transition: fill var(--blue-color);
 }
-
 .textfield {
     height: 40px;
     padding: 11px 12px 11px 42px;
 }
-
 textarea {
     height: 120px;
     padding: 12px 16px;
 }
-
 textarea::placeholder {
     font-family: var(--text-font-family);
     font-size: 12px;
@@ -753,23 +750,20 @@ textarea::placeholder {
     letter-spacing: 0.01em;
     color: rgba(117, 117, 117, 0.5);
 }
-
 .textfield,
 textarea {
     border-radius: 4px;
     border: 1px solid rgba(33, 33, 33, 0.2);
     outline: none;
+    transition: border (--transition);
 }
-
 .textfield:focus,
 textarea:focus {
-    border: 1px solid rgba(33, 150, 243, 1);
+    border: 1px solid var(--blue-color);
 }
-
 .textfield:focus+svg {
-    fill: rgba(33, 150, 243, 1);
+    fill: var(--blue-color);
 }
-
 .form-label {
     font-family: inherit;
     font-size: 12px;
@@ -786,7 +780,6 @@ textarea:focus {
     padding-bottom: 30px;
 }
 .check {
-    display: block;
     font-family: inherit;
     font-size: 14px;
     font-weight: 400;
@@ -797,35 +790,17 @@ textarea:focus {
 .check a {
     color: var(--blue-color);
 }
-.check-input {
-    display: block;
-    position: absolute;
+.check__input {
+    cursor: pointer;
+    position: relative;
     width: 16px;
     height: 15px;
-    background: var(--font-dark-grey-color);
-    cursor: pointer;
+    color: var(--font-dark-grey-color);
 }
-.check-box {
-    display: block;
-    position: absolute;
-    width: 2px;
-    height: 2px;
-    overflow: hidden;
-    border-radius: 2px;
-    background-position: 50% 50%;
-    border: 2px solid var(--font-dark-grey-color);
-    transition: border var(--transition);
-    cursor: pointer;
-}
-.check__input:checked+.check__box {
-    background-image: url(../images/symbol-defs.svg);
-    border: var(--blue-color);
-    
-}
-.check__input:focus+.check__box,
-.check__input:hover+.check__box {
-    border: var(--blue-color);
-    
+.check__input:checked {
+    background-image: url(../images/icon-check.svg);
+    width: 16px;
+    height: 15px;
 }
 .submit-button-container {
     display: flex;
@@ -847,10 +822,9 @@ textarea:focus {
     color: var(--background-white-color);
     border-color: var(--blue-color);
     box-shadow: 0px 4px 4px 0px #00000026;
-    transition: border var(--transition), shadow var(--transition)
+    transition: border var(--transition), box-shadow var(--transition)
 }
 .submit-button:hover {
     background: var(--blue-hover-color);
     box-shadow: 0px 4px 4px 0px #00000026;
-
 }
