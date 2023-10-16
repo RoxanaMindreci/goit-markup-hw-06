@@ -553,6 +553,35 @@
               </div>
             </div>
           </div>
+          <!--Subscribe-section-->
+          <div class="signup-container">
+            <form name="signup_form" autocomplete="on" novalidate>
+              
+                <label class="subscribe-title">
+                  Subscribe to the newsletter
+                  <div class="signup-container">
+                    <input
+                    class="input-email"
+                    type="text"
+                    name="email"
+                    id="email"
+                    pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$"
+                    required
+                    placeholder="E-mail"
+                  />
+                </label>
+              
+                    
+                    <button type="submit" class="subscribe-button">
+                        Subscribe<svg class="send-svg" >
+                              <use href="./images/symbol-defs.svg#icon-icon-send" width="24px" height="24px"></use>
+                        </svg>
+                    </button>
+                      
+                    
+                  </div>
+            </form>
+          </div>
         </div>
       </footer>
     </div>
@@ -626,7 +655,10 @@
 
           <div class="terms-container">
             <label class="check">
-              <input type="checkbox" class="check__input" />
+              <svg class="icon-checkbox">
+                <use href="/images/symbol-defs.svg#icon-icon-check"></use>
+              </svg>
+              <input type="checkbox" class="check__input" value="Checked" id="check-input"/>
               I agree with the letter and accept the
               <a href="#">Terms and Conditions</a>
             </label>
