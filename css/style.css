@@ -56,8 +56,6 @@ img {
     align-items: center;
     display: flex;
     margin: 0 auto;
-    padding-top: 32px;
-    padding-bottom: 32px;
 }
 .global-header .main-navigation {
     width: 40%;
@@ -74,8 +72,8 @@ img {
     gap: 60px;
 }
 .global-header .main-navigation ul li {
-    padding-top: 30px;
-    padding-bottom: 30px;
+    padding-top: 32px;
+    padding-bottom: 32px;
 }
 .global-header a {
     padding-top: 15px;
@@ -103,8 +101,8 @@ img {
     margin: 0;
 }
 .contact-container li {
-    padding-top: 15px;
-    padding-bottom: 15px;
+    padding-top: 17px;
+    padding-bottom: 17px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -127,8 +125,8 @@ img {
     position: relative;
 }
 .global-header .main-navigation a {
-    padding-top: 30px;
-    padding-bottom: 30px;
+    padding-top: 32px;
+    padding-bottom: 32px;
     color: var(--font-dark-grey-color);
     transition: color var(--transition);
 }
@@ -159,7 +157,7 @@ img {
     height: 4px;
     border-radius: 2px;
     background-color: var(--blue-hover-color);
-    bottom: -33px;
+    bottom: 0;
     left: 0;
 }
 .request-section {
@@ -857,6 +855,11 @@ textarea:focus {
     line-height: 24px;
     letter-spacing: 0.03em;
     cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 8px;
+    position: relative;
 }
 .check a {
     color: var(--blue-color);
@@ -871,8 +874,8 @@ textarea:focus {
     width: 16px;
     height: 15px;
     position: absolute;
-    top: calc(50% - 16px);
-    left: 14px;
+    top: calc(100%-7px);
+    left: 0px;
 }
 .check__input:not(:checked)+svg {
     display: none;
