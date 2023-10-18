@@ -865,24 +865,34 @@ textarea:focus {
     color: var(--blue-color);
 }
 .check__input {
-    cursor: pointer;
-    position: relative;
-    width: 16px;
-    height: 15px; 
+    position: absolute;
+    appearance: none;
+    opacity: 0; 
 }
-.icon-checkbox {
+.checkbox {
+    display: inline-block;
     width: 16px;
     height: 15px;
-    position: absolute;
-    top: calc(100%-7px);
-    left: 0px;
+    border: 2px solid var(--font-dark-grey-color);
+    border-radius: 2px;
+    vertical-align: sub;
 }
-.check__input:not(:checked)+svg {
-    display: none;
+.icon-checkbox {
+    display: block;
+    width: 16px;
+    height: 15px;
 }
-.check__input:checked {
-    visibility: hidden;
+.check__input:checked + .checkbox {
+    background-size: contain;
+    margin-top: auto;
+    margin-bottom: auto;
+    background-color: var(--blue-color);
+    border: 2 px solid var(--blue-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
+
 .submit-button-container {
     display: flex;
     justify-content: center;
